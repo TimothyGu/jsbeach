@@ -6,6 +6,7 @@ import connectEditor from '../connect-editor.js';
 import HTMLEditor from '../components/HTMLEditor.js';
 import CSSEditor from '../components/CSSEditor.js';
 import JSEditor from '../components/JSEditor.js';
+import ConnectedOutput from '../containers/ConnectedOutput.js';
 
 const { HTML, CSS, JS } = files;
 
@@ -25,6 +26,10 @@ function CodeArea(props) {
     <ReflexSplitter propagate={true} />
     <ReflexElement>
       <ConnectedJSEditor file={JS} />
+    </ReflexElement>
+    <ReflexSplitter propagate={true} />
+    <ReflexElement>
+      <ConnectedOutput />
     </ReflexElement>
   </ReflexContainer>;
 }

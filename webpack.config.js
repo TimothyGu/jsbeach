@@ -44,5 +44,5 @@ module.exports = {
   plugins: [
     extractCSS
   ],
-  devtool: 'cheap-eval-source-map'
+  devtool: 'cheap-source-map'
 };

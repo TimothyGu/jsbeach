@@ -16,6 +16,7 @@ class Editor extends React.Component {
   constructor(props) {
     super(props);
 
+    this.attachRef = comp => this.editor = comp;
     this.onChange = ({ target: { value } }) => {
       if (this.props.onChange)
         return this.props.onChange(value);
@@ -40,7 +41,7 @@ class Editor extends React.Component {
       }}
       viewportMargin={100}
       onChange={this.onChange}
-      ref={c => this.editor = c}
+      ref={this.attachRef}
     />;
   }
 }
